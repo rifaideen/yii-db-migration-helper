@@ -1,0 +1,34 @@
+{
+    "tables": {
+        "from": {
+            "table": "favorite_therapists",
+            "columns": [
+                "id",
+                "customer_id",
+                "therapist_id",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "favourite_therapist",
+            "columns": [
+                "id",
+                "user_id",
+                "therapist_id",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "customer_id": "user_id",
+        "therapist_id": "therapist_id",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

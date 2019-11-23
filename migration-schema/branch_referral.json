@@ -1,0 +1,67 @@
+{
+    "tables": {
+        "from": {
+            "table": "branch_referral",
+            "columns": [
+                "id",
+                "status",
+                "action",
+                "url",
+                "path",
+                "referrer_customer_id",
+                "referee_customer_id",
+                "referee_customer_email",
+                "is_registration_claimed",
+                "is_booking_claimed",
+                "is_registration_processed",
+                "is_booking_processed",
+                "points",
+                "notes",
+                "request",
+                "response",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "branch_referral",
+            "columns": [
+                "id",
+                "status",
+                "action",
+                "url",
+                "path",
+                "referrer_customer_id",
+                "referee_customer_id",
+                "referee_customer_email",
+                "is_registration_claimed",
+                "is_booking_claimed",
+                "is_registration_processed",
+                "is_booking_processed",
+                "points",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "status": "status",
+        "action": "action",
+        "url": "url",
+        "path": "path",
+        "referrer_customer_id": "referrer_customer_id",
+        "referee_customer_id": "referee_customer_id",
+        "referee_customer_email": "referee_customer_email",
+        "is_registration_claimed": "is_registration_claimed",
+        "is_booking_claimed": "is_booking_claimed",
+        "is_registration_processed": "is_registration_processed",
+        "is_booking_processed": "is_booking_processed",
+        "points": "points",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

@@ -1,0 +1,79 @@
+{
+    "tables": {
+        "from": {
+            "table": "locations",
+            "columns": [
+                "id",
+                "knack_id",
+                "booker_location_id",
+                "name",
+                "timezone",
+                "address",
+                "address2",
+                "city",
+                "state",
+                "zip",
+                "country",
+                "phone",
+                "lat",
+                "lng",
+                "status",
+                "coming_soon_message",
+                "description",
+                "hours",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "location",
+            "columns": [
+                "id",
+                "knack_id",
+                "service_ref_id",
+                "name",
+                "timezone",
+                "address",
+                "address2",
+                "city",
+                "state",
+                "zip",
+                "country",
+                "phone",
+                "lat",
+                "lang",
+                "status",
+                "coming_soon_message",
+                "description",
+                "hours",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "knack_id": "knack_id",
+        "booker_location_id": "service_ref_id",
+        "name": "name",
+        "timezone": "timezone",
+        "address": "address",
+        "address2": "address2",
+        "city": "city",
+        "state": "state",
+        "zip": "zip",
+        "country": "country",
+        "phone": "phone",
+        "lat": "lat",
+        "lng": "lang",
+        "status": "status",
+        "coming_soon_message": "coming_soon_message",
+        "description": "description",
+        "hours": "hours",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

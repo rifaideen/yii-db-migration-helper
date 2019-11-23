@@ -1,0 +1,43 @@
+{
+    "tables": {
+        "from": {
+            "table": "delayed_emails",
+            "columns": [
+                "id",
+                "to_email",
+                "response",
+                "send_date",
+                "type",
+                "sent",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "delayed_email",
+            "columns": [
+                "id",
+                "to",
+                "response",
+                "send_date",
+                "type",
+                "sent",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "to_email": "to",
+        "response": "response",
+        "send_date": "send_date",
+        "type": "type",
+        "sent": "sent",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

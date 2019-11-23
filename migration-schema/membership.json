@@ -1,0 +1,112 @@
+{
+    "tables": {
+        "from": {
+            "table": "membership_points",
+            "columns": [
+                "id",
+                "status",
+                "stripe_subscription_id",
+                "customer_id",
+                "stripe_customer_id",
+                "plan_name",
+                "plan_price",
+                "stripe_coupon",
+                "stripe_plan_id",
+                "giftcard_update_plan_id",
+                "stripe_product_id",
+                "points",
+                "start_date",
+                "next_start_date",
+                "pause_date",
+                "resume_pause_date",
+                "cancel_date",
+                "resume_date",
+                "cancel_reason",
+                "created_at",
+                "updated_at",
+                "is_charged",
+                "charge_id",
+                "charge_status",
+                "charge_amount",
+                "discount_amount",
+                "cancelled_amount",
+                "points_used"
+            ]
+        },
+        "to": {
+            "table": "membership",
+            "columns": [
+                "id",
+                "stripe_product_id",
+                "stripe_subscription_id",
+                "stripe_coupon",
+                "stripe_plan_id",
+                "giftcard_update_plan_id",
+                "points",
+                "start_date",
+                "next_start_date",
+                "pause_date",
+                "resume_pause_date",
+                "cancel_date",
+                "cancel_reason",
+                "resume_date",
+                "is_charged",
+                "charge_status",
+                "charge_amount",
+                "discount_amount",
+                "cancelled_amount",
+                "user_id",
+                "location_id",
+                "membership_type_id",
+                "entity_status_id",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "status": "entity_status_id",
+        "stripe_subscription_id": "stripe_subscription_id",
+        "customer_id": "user_id",
+        "plan_name": "membership_type_id",
+        "stripe_coupon": "stripe_coupon",
+        "stripe_plan_id": "stripe_plan_id",
+        "giftcard_update_plan_id": "giftcard_update_plan_id",
+        "stripe_product_id": "stripe_product_id",
+        "points": "points",
+        "start_date": "start_date",
+        "next_start_date": "next_start_date",
+        "pause_date": "pause_date",
+        "resume_pause_date": "resume_pause_date",
+        "cancel_date": "cancel_date",
+        "resume_date": "resume_date",
+        "cancel_reason": "cancel_reason",
+        "created_at": "created_at",
+        "updated_at": "updated_at",
+        "is_charged": "is_charged",
+        "charge_status": "charge_status",
+        "charge_amount": "charge_amount",
+        "discount_amount": "discount_amount",
+        "cancelled_amount": "cancelled_amount"
+    },
+    "overwrites": [],
+    "defaults": {
+        "location_id": 1
+    },
+    "id_mappings": {
+        "status": {
+            "active": 1,
+            "paused": 2,
+            "canceled": 3,
+            "points": 4
+        },
+        "plan_name": {
+            "80-Min Massage": 1,
+            "50-Min Massage": 2,
+            "Points": 3,
+            "80min": 1,
+            "50min": 2
+        }
+    }
+}

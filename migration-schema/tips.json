@@ -1,0 +1,55 @@
+{
+    "tables": {
+        "from": {
+            "table": "tips_transactions",
+            "columns": [
+                "id",
+                "status",
+                "type",
+                "knack_id",
+                "appointment_id",
+                "therapist_id",
+                "is_charged",
+                "charge_id",
+                "amount",
+                "request",
+                "response",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "tips",
+            "columns": [
+                "id",
+                "status",
+                "type",
+                "appointment_id",
+                "therapist_id",
+                "is_charged",
+                "charge_id",
+                "amount",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "status": "status",
+        "type": "type",
+        "knack_id": "",
+        "appointment_id": "appointment_id",
+        "therapist_id": "therapist_id",
+        "is_charged": "is_charged",
+        "charge_id": "charge_id",
+        "amount": "amount",
+        "request": "",
+        "response": "",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

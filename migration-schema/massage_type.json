@@ -1,0 +1,37 @@
+{
+    "tables": {
+        "from": {
+            "table": "massage_types",
+            "columns": [
+                "id",
+                "name",
+                "description",
+                "specialization_type",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "massage_type",
+            "columns": [
+                "id",
+                "name",
+                "description",
+                "specialization_type",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "name": "name",
+        "description": "description",
+        "specialization_type": "specialization_type",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}

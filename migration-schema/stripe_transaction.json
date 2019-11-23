@@ -1,0 +1,52 @@
+{
+    "tables": {
+        "from": {
+            "table": "stripe_transactions",
+            "columns": [
+                "id",
+                "charge_id",
+                "status",
+                "action",
+                "customer_id",
+                "stripe_customer_id",
+                "amount",
+                "currency",
+                "notes",
+                "request",
+                "response",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "stripe_transaction",
+            "columns": [
+                "id",
+                "charge_id",
+                "status",
+                "action",
+                "user_id",
+                "stripe_customer_id",
+                "amount",
+                "currency",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "id",
+        "charge_id": "charge_id",
+        "status": "status",
+        "action": "action",
+        "customer_id": "user_id",
+        "stripe_customer_id": "stripe_customer_id",
+        "amount": "amount",
+        "currency": "currency",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": [],
+    "id_mappings": []
+}
