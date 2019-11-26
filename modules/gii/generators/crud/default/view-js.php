@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const Joi = require('@hapi/joi');
 const Constants = require('../../commons/constants');
-const Model = require('<?= $modelPath ?>.js');
+const Model = require('<?= $modelPath ?>');
 
 const rules = Model.validatorRules();
 

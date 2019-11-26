@@ -62,6 +62,7 @@ module.exports = class <?= $className ?> extends Api {
 
   /**
    * Model relations mapping.
+   * Note: These relation mappings are generated for your convenience, you may need to adjust it to work properly.
    */
   static get relationMappings() {
     return {

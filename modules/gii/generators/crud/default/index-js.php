@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const Constants = require('../../commons/constants');
-const Model = require('<?= $modelPath ?>.js');
+const Model = require('<?= $modelPath ?>');
 
 /**
  * API request handler
@@ -14,7 +14,7 @@ const operation = server => {
     path: '<?= $paths['index'] ?>',
     options: {
       auth: <?= $isPublicAPI ? 'Constants.AUTH.ALL' : 'Constants.AUTH.ADMIN_OR_USER' ?>,
-      description: 'List all <?= $model ?> - Access - <?= $isPublicAPI ? 'All' : 'Authenticated' ?>',
+      description: 'List All <?= $model ?> - Access - <?= $isPublicAPI ? 'All' : 'Authenticated' ?>',
       tags: ['api'],
       validate: {},
       plugins: {
