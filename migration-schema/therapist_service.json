@@ -30,5 +30,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.therapist_service(SELECT t.id, t.service_id, t.therapist_id, t.created_at, t.updated_at FROM `squeeze-production`.therapist_services as t)"
 }

@@ -51,5 +51,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.tips(SELECT t.id, t.status, t.type, t.appointment_id, t.therapist_id, t.is_charged, t.charge_id, t.amount, t.created_at, t.updated_at FROM `squeeze-production`.tips_transactions as t)"
 }

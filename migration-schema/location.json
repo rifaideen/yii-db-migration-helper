@@ -75,5 +75,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.location(SELECT t.id, t.knack_id, t.booker_location_id, t.name, t.timezone, t.address, t.address2, t.city, t.state, t.zip, t.country, t.phone, t.lat, t.lng, t.status, t.coming_soon_message, t.description, t.hours, t.created_at, t.updated_at FROM `squeeze-production`.locations as t)"
 }

@@ -57,5 +57,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.review(SELECT t.id, t.knack_id, t.knack_approved, t.therapist_id, t.user_id, t.appointment_id, t.rating, t.favorite, t.share_public, t.share_therapist, t.comment, t.private_note, t.created_at, t.updated_at FROM `squeeze-production`.therapist_reviews as t)"
 }

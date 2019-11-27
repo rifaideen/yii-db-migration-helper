@@ -122,7 +122,9 @@
         "appstore_rating_nudge": "appstore_rating_nudge",
         "appstore_rating_nudge_date": "appstore_rating_nudge_date"
     },
-    "overwrites": [],
+    "overwrites": {
+        "location_id": 1
+    },
     "defaults": [],
     "id_mappings": []
 }

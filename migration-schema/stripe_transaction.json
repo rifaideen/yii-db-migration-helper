@@ -48,5 +48,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.stripe_transaction(SELECT t.id, t.charge_id, t.status, t.action, t.customer_id, t.stripe_customer_id, t.amount, t.currency, t.created_at, t.updated_at FROM `squeeze-production`.stripe_transactions as t)"
 }

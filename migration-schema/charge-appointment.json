@@ -103,5 +103,6 @@
     "defaults": {
         "entity_type": "appointment"
     },
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.charge(SELECT null, t.charge_status, t.charge_id, null, t.discount_amount, t.charge_amount, t.cancelled_amount, 'appointment', t.id, t.created_at, t.updated_at FROM `squeeze-production`.appointments as t)"
 }

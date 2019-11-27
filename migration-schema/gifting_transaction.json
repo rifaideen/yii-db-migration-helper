@@ -91,5 +91,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.gifting_transaction(SELECT t.id, t.knack_id, t.giftcard_code, t.code, t.type, t.delivery_date, t.status, t.is_charged, t.charge_id, t.booker_service_id, t.balance, t.total, t.discount,  t.qty, t.plan, t.membership_length, t.sender_customer_id, t.sender_has_membership, t.recipient_customer_id, t.request, t.response, t.charged_at, t.redeemed_at, t.created_at, t.updated_at  FROM `squeeze-production`.gifting_transactions as t)"
 }

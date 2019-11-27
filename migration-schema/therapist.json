@@ -81,5 +81,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.therapist(SELECT t.id, t.knack_id, t.booker_employee_id, t.booker_type, t.first_name, t.last_name, t.email, t.phone, t.gender, t.bio, t.image_url, t.pregnancy, t.average_rating, t.average_rating_count, t.admin_labor_rate, t.massage_labor_rate, t.license_expiration, t.license_number, t.location_id, t.status, t.created_at, t.updated_at FROM `squeeze-production`.therapists as t)"
 }

@@ -1,0 +1,51 @@
+{
+    "tables": {
+        "from": {
+            "table": "stripe_webhooks",
+            "columns": [
+                "id",
+                "request_id",
+                "status",
+                "action",
+                "path",
+                "notes",
+                "request",
+                "response",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "to": {
+            "table": "webhook",
+            "columns": [
+                "id",
+                "event",
+                "sender",
+                "url",
+                "request",
+                "params",
+                "status",
+                "created_at",
+                "updated_at"
+            ]
+        }
+    },
+    "mapping": {
+        "id": "",
+        "request_id": "params",
+        "status": "status",
+        "action": "event",
+        "path": "",
+        "notes": "",
+        "request": "request",
+        "response": "",
+        "created_at": "created_at",
+        "updated_at": "updated_at"
+    },
+    "overwrites": [],
+    "defaults": {
+        "sender": "stripe"
+    },
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.webhook(SELECT null, t.action, 'stripe', t.path, t.request, t.request_id, t.status, t.created_at, t.updated_at FROM `squeeze-production`.stripe_webhooks as t)"
+}

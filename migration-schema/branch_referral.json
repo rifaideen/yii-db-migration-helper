@@ -63,5 +63,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.branch_referral(SELECT t.id, t.status, t.action, t.url, t.path, t.referrer_customer_id, t.referee_customer_id, t.referee_customer_email, t.is_registration_claimed, t.is_booking_claimed, t.is_registration_processed, t.is_booking_processed, t.points, t.created_at, t.updated_at FROM `squeeze-production`.branch_referral as t)"
 }

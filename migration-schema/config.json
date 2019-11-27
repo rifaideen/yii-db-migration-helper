@@ -30,5 +30,6 @@
     },
     "overwrites": [],
     "defaults": [],
-    "id_mappings": []
+    "id_mappings": [],
+    "query": "INSERT INTO `squeeze-v2`.config(SELECT t.id, t.key, t.value, t.created_at, t.updated_at FROM `squeeze-production`.core_config as t)"
 }
