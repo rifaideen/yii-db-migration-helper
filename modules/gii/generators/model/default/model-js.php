@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const Joi = require('@hapi/joi');
 const Api = require('./api');
 
@@ -79,18 +78,20 @@ module.exports = class <?= $className ?> extends Api {
     };
   }
 
-  static $beforeFilter(filters, _context) {
+  // eslint-disable-next-line no-unused-vars
+  static $beforeFilter(filters, context) {
     /**
-     * Apply any extra filters required based on _context and you must 
+     * Apply any extra filters required based on `context` and you must 
      * always return true to continue filtering otherwise the filters won't be applied.
      * i.e filters.push({key: 'foo', value: 'bar'});
      */
     return true;
   }
 
-  static $beforeFind(model, _context) {
+  // eslint-disable-next-line no-unused-vars
+  static $beforeFind(model, context) {
     /**
-     * Add any extra logic here based on the `_context`
+     * Add any extra logic here based on the `context`
      * It's good place to add include any relation in the query.
      */
     <?php if (!empty($relations)): ?>
@@ -104,17 +105,8 @@ module.exports = class <?= $className ?> extends Api {
       /**
        * Fetch necessary relations.
        */
-      //<?= "model.eager('[" . implode(', ', $eagerRelations) . "]');" ?>
+      //  <?= "model.eager('[" . implode(', ', $eagerRelations) . "]');" ?>
 
-
-      /**
-       * Modify the relations as required.
-       */
-<?php foreach ($relations as $name => $relation): ?>
-      //model.modifyEager('<?= strtolower($name) ?>', builder => {
-        //  builder.select('*');
-      //});
-<?php endforeach; ?>
     <?php endif; ?>
   }
 

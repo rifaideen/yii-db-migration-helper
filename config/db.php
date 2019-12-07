@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=squeeze-production',
+    'dsn' => 'mysql:host=localhost;dbname=squeeze-v2',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
