@@ -95,17 +95,23 @@ module.exports = class <?= $className ?> extends Api {
      * It's good place to add include any relation in the query.
      */
     <?php if (!empty($relations)): ?>
-      <?php
-        $eagerRelations = [];
-        foreach ($relations as $name => $relation): 
-          $eagerRelations[] = strtolower($name);
-        endforeach; 
-      ?>
-
       /**
        * Fetch necessary relations.
        */
-      //  <?= "model.eager('[" . implode(', ', $eagerRelations) . "]');" ?>
+      let relations = [];
+
+      switch (context) {
+        case 'index':
+        case 'view':
+          // relations.push('relation-name');
+          break;
+        default:
+          break;
+      }
+
+      if (relations.length > 0) {
+        model.eager(`[${relations.join(',')}]`);
+      }
 
     <?php endif; ?>
   }
