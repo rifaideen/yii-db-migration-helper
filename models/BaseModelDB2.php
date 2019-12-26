@@ -60,9 +60,11 @@ class BaseModelDB2 extends \yii\db\ActiveRecord
      */
     public static $table_name = null;
 
-    public function __construct($table_name)
+    public function __construct($table_name = null)
     {
-        self::$table_name = $table_name;
+        if ($table_name) {
+            self::$table_name = $table_name;
+        }
     }
 
     /**
